@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css"
+	href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<link rel="stylesheet"
+	href="./css/start/jquery-ui-1.10.0.custom.min.css">
+<style type="text/css">.alignRight{text-align: right;}</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script src="./laddersearch.js"></script>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-11457868-13"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<meta name="keywords" content="PathOfExile, PoE, Ladder, Search, Ladderviewer, Race, Races, Event, Events, Tool">
+<meta name="description" content="PathOfExile Ladder Tool, helps you to keep track of ladder ranks!">
+<title>PathOfExile Ladder Search</title>
+</head>
+<body>
+	<div style="position: absolute; top: 30px; left: 0px">
+	<img id="info" title="click to show info" src="info.png" alt="Information about PathOfExile Ladder Search Tool" />
+	<div id="infotext" style="display:none;">
+		<p id="infoTextP"></p>
+	</div>
+	</div>
+	<select id="language" style="position: absolute; top: opx; left: 0px">
+		<option value="en" selected="selected">English</option>
+		<option value="de">German</option>
+	</select>
+	<div style="margin-left:100px; margin-right:auto">
+	<form>
+		<div id="league">
+		</div>
+	</form>
+	<div id="progressbar" style="position: relative"><div id="pPercent" style="width: 100%; margin: auto auto; z-index: 1; position: absolute; text-align:center; "></div></div>
+	<input type="checkbox" id="autoRefresh" title="" />
+	<label for="autoRefresh" title=""></label>
+	<button id="refresh" title=""></button>
+	<input id="refreshTill" name="refreshTill" value="100" />
+	<div id="autoRefreshSettings" style="padding:5px" title="">
+		<div id="refreshSpeedShow"
+			class="ui-state-default ui-corner-all" style="text-align:center"></div>
+		<div id="refreshSpeed"></div>
+	</div>
+	<div style="width : 724px">
+	<table id="nameTable">
+	</table>
+	</div>
+	</div>
+	<footer style="font-size:60%;text-align:center">
+	<p>PathOfExile Ladder Search Tool is using: <a href="https://www.pathofexile.com/developer/docs/api">Path of Exile API</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://jqueryui.com/">jQuery UI</a>, <a href="http://www.datatables.net/">DataTables</a> and the Information Icon from: <a href="http://www.oxygen-icons.org/">Oxygen</a></p>
+	</footer>
+</body>
+</html>
