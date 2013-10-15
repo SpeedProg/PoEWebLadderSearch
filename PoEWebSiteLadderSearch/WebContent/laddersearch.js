@@ -30,7 +30,7 @@ var trans = {
 			refreshSpinner : "Enter the PathOfExile ladderplace to which data should be loaded. (15000 is maximum)",
 			delaySlider : "Use this slider to select the delay between autoupdates.",
 			refreshButton : "Do a manual refresh.",
-			defaultAndHarcoreButton : "This shows the Default and Harcore chars in one list!"
+			defaultAndHarcoreButton : "This shows the Standart and Harcore chars in one list!"
 		},
 		buttons : {
 			refresh : "Refresh",
@@ -69,7 +69,7 @@ var trans = {
 			refreshSpinner : "Gebe den Rang ein bis zu dem daten geladen werden sollen. (Höchstens 15000)",
 			delaySlider : "Hier kannst du die wartezeit zwischen den neuladen einstellen.",
 			refreshButton : "Führe ein manuelles neuladen aus.",
-			defaultAndHarcoreButton : "This shows the Default and Harcore chars in one list!"
+			defaultAndHarcoreButton : "This shows the Standard and Harcore chars in one list!"
 		},
 		buttons : {
 			refresh : "Neuladen",
@@ -122,7 +122,7 @@ var trans = {
 			refreshSpinner : "63b3 d3n r4n6 31n b15 zu d3m d473n 63l4d3n w3rd3n 50ll3n. (höch573n5 15000)",
 			delaySlider : "h13r k4nn57 du d13 w4r73z317 zw15ch3n d3n n3ul4d3n 31n573ll3n.",
 			refreshButton : "führ3 31n m4nu3ll35 n3ul4d3n 4u5.",
-			defaultAndHarcoreButton : "This shows the Default and Harcore chars in one list!"
+			defaultAndHarcoreButton : "This shows the Standard and Harcore chars in one list!"
 		},
 		buttons : {
 			refresh : "n3ul4d3n",
@@ -148,7 +148,7 @@ var trans = {
 		infoDialogHtml : "PathOfExile Ladder Search was made because I didn't find a site that worked and had the functionality I needed.<br />If you have anything I should add to it, feel free to contact me on the PathOfExile site: <a href='http://www.pathofexile.com/account/view-profile/speedprog' target='_blank'>Here</a>"
 	}
 };
-var defaultAndHardcoreId = "Default and Hardcore";
+var defaultAndHardcoreId = "Standard and Hardcore";
 var usedLang = "en";
 var entryTableVersion = 3;
 function Ladder() {
@@ -268,7 +268,7 @@ function saveEntryTable(table) {
 }
 var mergedEntryTable = new MergedEntryTable();
 var ladderArray = [];
-var entryTable = loadEntryTable("Default");
+var entryTable = loadEntryTable("Standard");
 var numberOfQuerys = 0;
 var intervalId = 0;
 var isRefreshing = false;
@@ -468,7 +468,7 @@ function forceMergedRefresh() {
 }
 
 function doForcedMergeRefresh(league, table) {
-	getLadder(startAt, endAt, limitTo, "Default", table.defaultLadder);
+	getLadder(startAt, endAt, limitTo, "Standard", table.defaultLadder);
 	startAt += getLadder(startAt, endAt, limitTo, "Hardcore",
 			table.hardcoreLadder);
 	if (endAt - startAt <= 0) {
@@ -691,7 +691,7 @@ function getLadders() {
 						}
 						// we go the ladders :) now start the other stuff!
 						createLadderButtons();
-						updateLadder("Default");
+						updateLadder("Standard");
 						window.setInterval(doStuff, 1000);
 					});
 }
